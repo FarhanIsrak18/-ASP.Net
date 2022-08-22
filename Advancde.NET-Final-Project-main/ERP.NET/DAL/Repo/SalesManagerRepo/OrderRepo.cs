@@ -8,16 +8,16 @@ using System.Threading.Tasks;
 
 namespace DAL.Repo.SalesManagerRepo
 {
-    public class CustomerRepo : IRepo<Customer, int, bool>
+    public class OrderRepo : IRepo<Order, int, bool>
     {
         ERPEntities db;
-        public CustomerRepo(ERPEntities db)
+        public OrderRepo(ERPEntities db)
         {
             this.db = db;
         }
-        public bool Create(Customer obj)
+        public bool Create(Order obj)
         {
-            db.Customers.Add(obj);
+            db.Orders.Add(obj);
             int res = db.SaveChanges();
             return res > 0;
         }
@@ -25,24 +25,24 @@ namespace DAL.Repo.SalesManagerRepo
         public bool Delete(int id)
         {
             var obj = Get(id);
-            db.Customers.Remove(obj);
+            db.Orders.Remove(obj);
             int res = db.SaveChanges();
             return res > 0;
         }
 
-        public List<Customer> Get()
+        public List<Order> Get()
         {
-            return db.Customers.ToList();
+            return db.Orders.ToList();
         }
 
-        public Customer Get(int id)
+        public Order Get(int id)
         {
-            return db.Customers.Find(id);
+            return db.Orders.Find(id);
         }
 
-        public bool Update(Customer obj)
+        public bool Update(Order obj)
         {
-            var exists = db.Customers.FirstOrDefault(x => x.id == obj.id);
+            var exists = db.Orders.FirstOrDefault(x => x.id == obj.id);
             if (exists != null)
             {
                 db.Entry(exists).CurrentValues.SetValues(obj);

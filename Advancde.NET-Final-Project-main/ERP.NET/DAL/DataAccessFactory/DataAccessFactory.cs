@@ -34,12 +34,15 @@ namespace DAL.DataAccessFactory
             return new IssueRepo(db);
         }
 
-        
-        
+               
         //sales
         public static IRepo<Customer, int, bool> CustomerworkDataAccess()
         {
             return new CustomerRepo(db);
+        }
+        public static IRepo<Order, int, bool> OrderDataAccess()
+        {
+            return new OrderRepo(db);
         }
     }
 }

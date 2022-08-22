@@ -20,5 +20,36 @@ namespace PL.Controllers.SalesManagerController
             var data = CustomerServices.Get();
             return Request.CreateResponse(HttpStatusCode.OK, data);
         }
+        [Route("api/customer/create")]
+        [HttpPost]
+        public HttpResponseMessage Create(CustomerModel customer)
+        {
+            var data = CustomerServices.Create(customer);
+            return Request.CreateResponse(HttpStatusCode.OK, data);
+        }
+        [Route("api/customer/{id}")]
+        [HttpGet]
+        public HttpResponseMessage Get(int id)
+        {
+            var data = CustomerServices.Get(id);
+            return Request.CreateResponse(HttpStatusCode.OK, data);
+        }
+
+        [Route("api/customer/delete/{id}")]
+        [HttpGet]
+        public HttpResponseMessage Delete(int id)
+        {
+            var data = CustomerServices.Delete(id);
+            return Request.CreateResponse(HttpStatusCode.OK, data);
+        }
+
+
+        [Route("api/customer/update")]
+        [HttpPost]
+        public HttpResponseMessage Update(CustomerModel customer)
+        {
+            var data = CustomerServices.Update(customer);
+            return Request.CreateResponse(HttpStatusCode.OK, data);
+        }
     }
 }

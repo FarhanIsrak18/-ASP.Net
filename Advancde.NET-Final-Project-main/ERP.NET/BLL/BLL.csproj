@@ -47,6 +47,7 @@
     <Compile Include="Entities\IssueModel.cs" />
     <Compile Include="Entities\LeaveRequestModel.cs" />
     <Compile Include="Entities\ListedProductModel.cs" />
+    <Compile Include="Entities\OrderModel.cs" />
     <Compile Include="Entities\ProductModel.cs" />
     <Compile Include="Entities\UserLog.cs" />
     <Compile Include="Entities\UserModel.cs" />
@@ -56,6 +57,7 @@
     <Compile Include="Services\ProductManagerServices\ProductServices.cs" />
     <Compile Include="Services\ProductManagerServices\WareHouseServices.cs" />
     <Compile Include="Services\SalesManagerServices\CustomerServices.cs" />
+    <Compile Include="Services\SalesManagerServices\OrderServices.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Services\CommonServices\" />

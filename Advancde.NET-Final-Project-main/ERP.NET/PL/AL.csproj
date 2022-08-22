@@ -154,6 +154,7 @@
     <Compile Include="Controllers\ProductManagerController\ProductManagerIssueController.cs" />
     <Compile Include="Controllers\ProductManagerController\WareHouseController.cs" />
     <Compile Include="Controllers\SalesManagerController\CustomerController.cs" />
+    <Compile Include="Controllers\SalesManagerController\OrderController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
