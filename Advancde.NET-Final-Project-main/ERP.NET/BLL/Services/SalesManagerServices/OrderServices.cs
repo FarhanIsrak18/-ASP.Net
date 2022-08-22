@@ -69,5 +69,26 @@ namespace BLL.Services.SalesManagerServices
             }
             return null;
         }
+
+        public static bool Delete(int id)
+        {
+            return DataAccessFactory.OrderDataAccess().Delete(id);
+        }
+
+        public static bool Update(OrderModel item)
+        {
+            var order = new Order()
+            {
+                id = item.id,
+                customer_id = item.customer_id,
+                order_description = item.order_description,
+                status = item.status,
+                order_made = item.order_made,
+                total_amount = item.total_amount,
+                delivered_on = item.delivered_on,
+                type = item.type
+            };
+            return DataAccessFactory.OrderDataAccess().Update(order);
+        }
     }
 }

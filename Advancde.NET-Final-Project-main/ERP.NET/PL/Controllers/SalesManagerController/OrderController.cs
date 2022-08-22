@@ -33,5 +33,21 @@ namespace PL.Controllers.SalesManagerController
             var data = OrderServices.Get(id);
             return Request.CreateResponse(HttpStatusCode.OK, data);
         }
+
+        [Route("api/order/delete/{id}")]
+        [HttpGet]
+        public HttpResponseMessage Delete(int id)
+        {
+            var data = OrderServices.Delete(id);
+            return Request.CreateResponse(HttpStatusCode.OK, data);
+        }
+
+        [Route("api/order/update")]
+        [HttpPost]
+        public HttpResponseMessage Update(OrderModel order)
+        {
+            var data = OrderServices.Update(order);
+            return Request.CreateResponse(HttpStatusCode.OK, data);
+        }
     }
 }
