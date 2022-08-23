@@ -144,6 +144,7 @@
     <Compile Include="Repo\ProductManagerRepo\WareHouseRepo.cs" />
     <Compile Include="Repo\SalesManagerRepo\CustomerRepo.cs" />
     <Compile Include="Repo\SalesManagerRepo\OrderRepo.cs" />
+    <Compile Include="Repo\SalesManagerRepo\ProfileRepo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Interfaces\FinanceManager\" />

@@ -44,5 +44,9 @@ namespace DAL.DataAccessFactory
         {
             return new OrderRepo(db);
         }
+        public static IRepo<User, int, bool> SalesManagerProfileDataAccess()
+        {
+            return new ProfileRepo(db);
+        }
     }
 }

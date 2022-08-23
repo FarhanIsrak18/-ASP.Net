@@ -58,6 +58,7 @@
     <Compile Include="Services\ProductManagerServices\WareHouseServices.cs" />
     <Compile Include="Services\SalesManagerServices\CustomerServices.cs" />
     <Compile Include="Services\SalesManagerServices\OrderServices.cs" />
+    <Compile Include="Services\SalesManagerServices\ProfileServices.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Services\CommonServices\" />
